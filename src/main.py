@@ -56,26 +56,20 @@ def main():
         x = int(input("Enter your choice number: "))
         print("--------------------------")
 
-        first_num, second_num = None, None
-
         if x in [1, 2, 3, 4]:
             while True:
                 try:
                     first_num = int(input("Enter first number: "))
+                    break
                 except ValueError:
                     print("Invalid input, please enter a number!")
-                    continue
-                else:
-                    break
 
             while True:
                 try:
                     second_num = int(input("Enter second number: "))
+                    break
                 except ValueError:
                     print("Invalid input, please enter a number!")
-                    continue
-                else:
-                    break
 
             if x == 1:
                 ins = Add(first_num, second_num)
@@ -104,7 +98,6 @@ def main():
 
         else:
             print("Invalid choice!")
-
 
 
 if __name__ == "__main__":
